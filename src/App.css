@@ -1,6 +1,7 @@
 :root {
   --header: #f348ed;
   --progress: #c000ba;
+  --chat: #eff3f5;
 }
 
 .badge-light {
@@ -9,6 +10,10 @@
 
 .bg-header {
   background-color: var(--header);
+}
+
+.bg-chat-forms {
+  background-color: var(--chat);
 }
 
 .progress-bar {
@@ -24,6 +29,12 @@
   width: 20px;
   height: auto;
   padding-bottom: 10px;
+}
+
+.img-chat {
+  width: 80px;
+  height: 80PX;
+  border-radius: 50%;
 }
 
 .font-title {
