@@ -1,4 +1,8 @@
 import './App.css';
+import Name from './components/Name';
+import Date from './components/Date';
+import Contact from './components/Contact';
+import Face from './assets/img/face.png';
 
 function App() {
   return (
@@ -16,7 +20,9 @@ function App() {
         <div class="progress-bar" role="progressbar" style={{ width: "50%" }} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
       <div className="container-fluid">
-
+        <Name image={Face}/>
+        <Date image={Face}/>
+        <Contact image={Face}/>
       </div>
     </div>
 
