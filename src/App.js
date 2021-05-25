@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="container-fluid bg-header">
+        <div className="p-4 d-flex justify-content-between">
+          <div className="font-title">Registro de Usuario</div>
+          <img className="img-size" src={require('./assets/img/clipboard.png').default} alt="" />
+        </div>
+        <div className="p-4">
+          <span className="badge badge-pill badge-light"><img className="img-watch" src={require('./assets/img/watch.svg').default} /></span>En menos de 5 munutos.
+      </div>
+      </div>
+      <div class="progress" style={{ height: 3 }}>
+        <div class="progress-bar" role="progressbar" style={{ width: "50%" }} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div className="container-fluid">
+
+      </div>
     </div>
+
   );
 }
 
