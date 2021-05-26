@@ -33,11 +33,18 @@ function App() {
     contact: '',
     complete: ''
   })
+
   const submite = (data) => {
     if (data === "name") {
       setValidator(prevState => ({
         ...prevState,
         name: true
+      }))
+      localStorage.setItem("formName",JSON.stringify({
+        name: formName.name,
+        secondName: formName.secondName,
+        lastName: formName.lastName,
+        motherLastName: formName.motherLastName
       }))
       console.log("validator: ", validator);
     }
@@ -46,20 +53,27 @@ function App() {
         ...prevState,
         date: true
       }))
+      localStorage.setItem("formDate",JSON.stringify({
+        day: formDate.day,
+        month: formDate.month,
+        year: formDate.year
+      }))
     }
     if (data === "contact") {
       setValidator(prevState => ({
         ...prevState,
         contact: true
       }))
-      console.log("log del valuidatior contact: ", validator);
+      localStorage.setItem("formContact",JSON.stringify({
+        email: formContact.email,
+        phone: formContact.phone,
+      }))
     }
     if (data === "complete") {
       setValidator(prevState => ({
         ...prevState,
         complete: true
       }))
-      console.log("log del valuidatior contact: ", validator);
     }
   }
 
@@ -122,10 +136,10 @@ function App() {
               <ContactMessage {...formContact} />
               <div className="d-flex justify-content-center mb-4">
                 <div className="col-sm-6 ">
-                  <button className="btn btn-primary btn-block" onClick={()=>submite("complete")} >Iniciar</button>
+                  <button className="btn btn-primary btn-block" onClick={() => submite("complete")} >Iniciar</button>
                 </div>
               </div>
-              {validator.complete === true ? <CompleteMessage {...formName} {...formContact} {...formDate}/> : null}
+              {validator.complete === true ? <CompleteMessage {...formName} {...formContact} {...formDate} /> : null}
             </div> : null}
           </div> : null}
         </div> : null}
