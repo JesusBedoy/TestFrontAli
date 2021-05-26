@@ -4,6 +4,18 @@
   --chat: #eff3f5;
 }
 
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited  {
+  background-color: var(--progress);
+  border-color: var(--progress);
+}
+.btn-primary:hover{
+  background-color: var(--header);
+  border-color: var(--progress);
+}
+
 .badge-light {
   background-color: var(--header);
 }
@@ -14,6 +26,14 @@
 
 .bg-chat-forms {
   background-color: var(--chat);
+}
+
+.bg-chat-message {
+  background-color: var(--header);
+}
+
+.bg-chat-width {
+  width: 90%;
 }
 
 .progress-bar {
@@ -41,3 +61,4 @@
   font-size:larger;
   font-weight: bold;
 }
+
